@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politeknik Indonusa Surakarta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.jpg" type="image/jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="profile">
+            <h1>NexGen Website</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="akademi.html" class="active"><i class="fas fa-briefcase"></i> Akademik</a></li>
+                <li><a href="location.html"><i class="fas fa-envelope"></i> location</a></li>
+            </ul>
+        </nav>
+        <div class="copyright">
+            <p>&copy; NexGen</p>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1>Jurusan Politek Indonusa Surakarta.</h1>
+            <p>Di Polinus ada beberapa jurusan yang banyak di Minati lho, Ayo Cek Sekarang!.</p>
+        </header>
+        
+        <div class="news">
+            <h2>S1 TRPL</h2>
+            <article class="news-item">
+                <h3>Teknologi Rekayasa Perangkat Lunak (S1 Terapan)</h3>
+                <p>Program Studi Teknik Rekayasa Perangkat Lunak di Politeknik Indonusa Surakarta
+                     (Polinusa) adalah salah satu program studi yang fokus pada pengembangan perangkat lunak dan teknologi informasi.</p>
+        </div>
+
+        <div class="news">
+          <h2>S1 TRO</h2>
+          <article class="news-item">
+              <h3>Teknologi Rekayasa Otomotif (S1 Terapan)</h3>
+              <p>Program studi ini memfokuskan pada keterampilan teknis dalam desain, perbaikan,
+                 dan pemeliharaan kendaraan bermotor. Mahasiswa belajar tentang prinsip dasar mesin, 
+                 teknologi sistem kelistrikan, serta teknik-teknik diagnostik untuk mengidentifikasi dan memperbaiki masalah pada kendaraan.</p>
+      </div>
+
+      <<div class="news">
+        <h2>S1 PM</h2>
+        <article class="news-item">
+            <h3>Produksi Media (S1 Terapan)</h3>
+            <p>Program studi ini mengajarkan keterampilan dalam pembuatan, desain, dan pengelolaan berbagai jenis media, termasuk media
+                 cetak, digital, dan audio-visual. Mahasiswa akan mempelajari teknik-teknik produksi yang mencakup desain grafis,
+                  editing video, serta produksi audio.</p>
+    </div>
+
+    <div class="news">
+        <h2>D3 PH</h2>
+        <article class="news-item">
+            <h3>Perhotelan (D3)</h3>
+            <p>Program studi ini berfokus pada manajemen dan operasional dalam industri perhotelan, termasuk layanan pelanggan,
+                 manajemen hotel, dan operasional restoran. Mahasiswa akan mempelajari teknik-teknik manajerial dan layanan untuk 
+                 meningkatkan pengalaman tamu.</p>
+    </div>
+
+    <div class="news">
+        <h2>D3 FM</h2>
+        <article class="news-item">
+            <h3>Farmasi (D3)</h3>
+            <p>Program studi ini fokus pada ilmu farmasi yang mencakup produksi, pengelolaan, dan penggunaan obat-obatan. 
+                Mahasiswa belajar tentang formulasi obat, teknologi farmasi, serta pengelolaan apotek.</p>
+    </div>
+
+    <div class="news">
+        <h2>S1 MIK</h2>
+        <article class="news-item">
+            <h3>Teknologi informasi Kesehatan (S1 Terapan)</h3>
+            <p>Program studi ini memfokuskan pada pengelolaan dan analisis informasi dalam sektor kesehatan, 
+                termasuk sistem informasi kesehatan dan data kesehatan. Mahasiswa akan mempelajari bagaimana 
+                teknologi informasi dapat diterapkan untuk meningkatkan layanan kesehatan.</p>
+    </div>
+
+    <div class="news">
+        <h2>S1 TLM</h2>
+        <article class="news-item">
+            <h3>Teknologi Labolatorium Medis (S1 Terapan)</h3>
+            <p>Program studi ini mengajarkan keterampilan dalam analisis dan diagnostik laboratorium medis.
+                Mahasiswa mempelajari teknik-teknik analisis untuk mendukung diagnosis medis dan pengelolaan laboratorium.</p>
+    </div>
+
+    </div>
+</body>
+</html>
