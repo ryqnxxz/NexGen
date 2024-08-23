@@ -1,13 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Politeknik Indonusa Surakarta</title>
+    <title>About Us</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/logo.jpg" type="image/jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .student-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .student-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .student-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .student-card .student-info {
+            padding: 20px;
+        }
+
+        .student-card .student-info h3 {
+            margin: 0;
+            color: #007bff;
+        }
+
+        .student-card .student-info p {
+            margin: 10px 0;
+        }
+
+        .detail-button {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .detail-button:hover {
+            background-color: #0056b3;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .student-photo {
+            width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
     <div class="sidebar">
@@ -19,7 +108,7 @@
                 <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
                 <li><a href="about.html" class="active"><i class="fas fa-user"></i> About</a></li>
                 <li><a href="akademi.html"><i class="fas fa-briefcase"></i> Akademik</a></li>
-                <li><a href="location.html"><i class="fas fa-envelope"></i> location</a></li>
+                <li><a href="location.html"><i class="fas fa-map-marker-alt"></i> Location</a></li>
             </ul>
         </nav>
         <div class="copyright">
@@ -30,41 +119,202 @@
     <div class="main-content">
         <header>
             <h1>Ini adalah Profile Para pendiri Website Ini</h1>
-            <p>Kelompok kami di namai NexGen yang berarti Generasi Terdepan</p>
+            <p>Kelompok kami di namai NexGen yang berarti Generasi Terdepan. Klik tombol 'Lihat Detail' untuk informasi lebih lanjut.</p>
         </header>
 
-        <div class="student-cards">
+        <section class="intro">
+            <h2>Daftar Siswa</h2>
+            <!-- Student Card 1 -->
             <div class="student-card">
-                <h2>Ayu Anggrahini</h2>
+                <img src="images/ayu.jpeg" alt="Foto Mahasiswa">
+                <div class="student-info">
+                    <h3>Ayu Anggrahini</h3>
+                    <p>Teknik Informatika</p>
+                    <a href="#" class="detail-button" onclick="openModal('ayu')">Lihat Detail</a>
+                </div>
+            </div>
+
+            <!-- Student Card 2 -->
+            <div class="student-card">
+                <img src="images/ryan.jpeg" alt="Foto Mahasiswa">
+                <div class="student-info">
+                    <h3>Ryan Waskito Aji</h3>
+                    <p>Teknik Informatika</p>
+                    <a href="#" class="detail-button" onclick="openModal('ryan')">Lihat Detail</a>
+                </div>
+            </div>
+
+            <!-- Student Card 3 -->
+            <div class="student-card">
+                <img src="images/llintang.jpeg" alt="Foto Mahasiswa">
+                <div class="student-info">
+                    <h3>Lintang Cahya Ardaputri</h3>
+                    <p>Teknik Informatika</p>
+                    <a href="#" class="detail-button" onclick="openModal('lintang')">Lihat Detail</a>
+                </div>
+            </div>
+
+            <!-- Student Card 4 -->
+            <div class="student-card">
+                <img src="images/may faniiiiiiiiiiiiiiiiiii.jpeg" alt="Foto Mahasiswa">
+                <div class="student-info">
+                    <h3>May Fani Fajar Wati</h3>
+                    <p>Teknik Informatika</p>
+                    <a href="#" class="detail-button" onclick="openModal('may')">Lihat Detail</a>
+                </div>
+            </div>
+
+            <!-- Student Card 5 -->
+            <div class="student-card">
+                <img src="images/inezzzzz.jpeg" alt="Foto Mahasiswa">
+                <div class="student-info">
+                    <h3>Yunita Inesis Putri Cahyani</h3>
+                    <p>Teknik Informatika</p>
+                    <a href="#" class="detail-button" onclick="openModal('yunita')">Lihat Detail</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal for Ayu Anggrahini -->
+    <div id="ayu" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('ayu')">&times;</span>
+            <section class="student-detail">
+                <h2>Nama: Ayu Anggrahini</h2>
+                <img src="images/ayu.jpeg" alt="Foto Mahasiswa" class="student-photo">
                 <p><strong>Usia:</strong> 18 tahun</p>
-                <p><strong>Alamat:</strong> Surakarta</p>
-                <button class="detail-button" data-student="Ayu Anggrahini">Lihat Detail</button>
-            </div>
-            <div class="student-card">
-                <h2>Ryan Waskito Aji</h2>
-                <p><strong>Usia:</strong> 18 tahun</p>
-                <p><strong>Alamat:</strong> Solo Raya</p>
-                <button class="detail-button" data-student="Ryan Waskito Aji">Lihat Detail</button>
-            </div>
-            <div class="student-card">
-                <h2>Lintang Cahya Ardaputri</h2>
-                <p><strong>Usia:</strong> 17 tahun</p>
-                <p><strong>Alamat:</strong> Solo Baru</p>
-                <button class="detail-button" data-student="Lintang Cahya Ardaputri">Lihat Detail</button>
-            </div>
-            <div class="student-card">
-                <h2>May Fani Fajar Wati</h2>
-                <p><strong>Usia:</strong> 19 tahun</p>
-                <p><strong>Alamat:</strong> Laweyan</p>
-                <button class="detail-button" data-student="May Fani Fajar Wati">Lihat Detail</button>
-            </div>
-            <div class="student-card">
-                <h2>Yunita Inesis Putri Cahyani</h2>
-                <p><strong>Usia:</strong> 19 tahun</p>
-                <p><strong>Alamat:</strong> Karanganyar</p>
-                <button class="detail-button" data-student="Yunita Inesis Putri Cahyani">Lihat Detail</button>
-            </div>
+                <p><strong>Jurusan:</strong> Teknik Informatika</p>
+                <p><strong>Universitas:</strong> Politeknik Indonusa Surakarta</p>
+                <p><strong>Hobi:</strong> TikTokan, Musikan, Soping</p>
+                <h3>Proyek dan Pengalaman:</h3>
+                <ul>
+                    <li><strong>Proyek Aplikasi Perpustakaan:</strong> Membuat aplikasi perpustakaan berbasis web menggunakan HTML, CSS, dan JavaScript.</li>
+                    <li><strong>Proyek Aplikasi Mobile:</strong> Mengembangkan aplikasi mobile untuk manajemen tugas harian menggunakan Flutter.</li>
+                    <li><strong>Internship di Perusahaan ABC:</strong> Berpengalaman sebagai intern di perusahaan ABC, bekerja pada pengembangan sistem backend menggunakan Node.js.</li>
+                </ul>
+                <h3>Kontak:</h3>
+                <p><strong>Email:</strong> ayuuuu188@gmail.com</p>
+                <p><strong>Telepon:</strong> <a href="https://wa.me/6289571231876?text=Hai%2C%20saya%20harap%20hari%20ini%20menjadi%20lebih%20baik...%20Oh%2C%20siapa%20yang%20saya%20bercanda%3F" target="_blank">+62 859-1987-5326</a></p>
+                <a href="index.html"><button>Kembali ke Portofolio Siswa</button></a>
+            </section>
         </div>
     </div>
+
+    <!-- Modal for Ryan Waskito Aji -->
+    <div id="ryan" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('ryan')">&times;</span>
+            <section class="student-detail">
+                <h2>Nama: Ryan Waskito Aji</h2>
+                <img src="images/ryan.jpeg" alt="Foto Mahasiswa" class="student-photo">
+                <p><strong>Usia:</strong> 18 tahun</p>
+                <p><strong>Jurusan:</strong> Teknik Informatika</p>
+                <p><strong>Universitas:</strong> Politeknik Indonusa Surakarta</p>
+                <p><strong>Hobi:</strong> Gaming, Cars Spotter, Ahli Cinematic</p>
+                <h3>Proyek dan Pengalaman:</h3>
+                <ul>
+                    <li><strong>Proyek Aplikasi Perpustakaan:</strong> Membuat aplikasi perpustakaan berbasis web menggunakan HTML, CSS, dan JavaScript.</li>
+                    <li><strong>Proyek Aplikasi Mobile:</strong> Mengembangkan aplikasi mobile untuk manajemen tugas harian menggunakan Flutter.</li>
+                    <li><strong>Internship di Perusahaan ABC:</strong> Berpengalaman sebagai intern di perusahaan ABC, bekerja pada pengembangan sistem backend menggunakan Node.js.</li>
+                </ul>
+                <h3>Kontak:</h3>
+                <p><strong>Email:</strong> ryannn777@gmail.com</p>
+                <p><strong>Telepon:</strong> <a href="https://wa.me/6289571231876?text=Hai%2C%20saya%20harap%20hari%20ini%20menjadi%20lebih%20baik...%20Oh%2C%20siapa%20yang%20saya%20bercanda%3F" target="_blank">+62 895-7123-1876</a></p>
+                <a href="index.html"><button>Kembali ke Portofolio Siswa</button></a>
+            </section>
+        </div>
+    </div>
+
+    <!-- Modal for Lintang Cahya -->
+    <div id="lintang" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('lintang')">&times;</span>
+            <section class="student-detail">
+                <h2>Nama: Lintang Cahya Ardaputri</h2>
+                <img src="images/llintang.jpeg" alt="Foto Mahasiswa" class="student-photo">
+                <p><strong>Usia:</strong> 17 tahun</p>
+                <p><strong>Jurusan:</strong> Teknik Informatika</p>
+                <p><strong>Universitas:</strong> Politeknik Indonusa Surakarta</p>
+                <p><strong>Hobi:</strong> Scroll Instagram, Nonton Windah Batubara</p>
+                <h3>Proyek dan Pengalaman:</h3>
+                <ul>
+                    <li><strong>Proyek Aplikasi Perpustakaan:</strong> Membuat aplikasi perpustakaan berbasis web menggunakan HTML, CSS, dan JavaScript.</li>
+                    <li><strong>Proyek Aplikasi Mobile:</strong> Mengembangkan aplikasi mobile untuk manajemen tugas harian menggunakan Flutter.</li>
+                    <li><strong>Internship di Perusahaan ABC:</strong> Berpengalaman sebagai intern di perusahaan ABC, bekerja pada pengembangan sistem backend menggunakan Node.js.</li>
+                </ul>
+                <h3>Kontak:</h3>
+                <p><strong>Email:</strong> lintangkejora111@gmail.com</p>
+                <p><strong>Telepon:</strong> <a href="https://wa.me/+6282133456789" target="_blank">+62 8282-1334-5679</a></p>
+                <a href="index.html"><button>Kembali ke Portofolio Siswa</button></a>
+            </section>
+        </div>
+    </div>
+
+    <!-- Modal for May Fani -->
+    <div id="may" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('may')">&times;</span>
+            <section class="student-detail">
+                <h2>Nama: May Fani Fajar Wati</h2>
+                <img src="images/may faniiiiiiiiiiiiiiiiiii.jpeg" alt="Foto Mahasiswa" class="student-photo">
+                <p><strong>Usia:</strong> 19 tahun</p>
+                <p><strong>Jurusan:</strong> Teknik Informatika</p>
+                <p><strong>Universitas:</strong> Politeknik Indonusa Surakarta</p>
+                <p><strong>Hobi:</strong> Scroll TikTok, Drakoran, Tripbis</p>
+                <h3>Proyek dan Pengalaman:</h3>
+                <ul>
+                    <li><strong>Proyek Aplikasi Perpustakaan:</strong> Membuat aplikasi perpustakaan berbasis web menggunakan HTML, CSS, dan JavaScript.</li>
+                    <li><strong>Proyek Aplikasi Mobile:</strong> Mengembangkan aplikasi mobile untuk manajemen tugas harian menggunakan Flutter.</li>
+                    <li><strong>Internship di Perusahaan ABC:</strong> Berpengalaman sebagai intern di perusahaan ABC, bekerja pada pengembangan sistem backend menggunakan Node.js.</li>
+                </ul>
+                <h3>Kontak:</h3>
+                <p><strong>Email:</strong> melani765@gmail.com</p>
+                <p><strong>Telepon:</strong> <a href="https://wa.me/+6281234265379" target="_blank">+62 8123-4265-379</a></p>
+                <a href="index.html"><button>Kembali ke Portofolio Siswa</button></a>
+            </section>
+        </div>
+    </div>
+
+    <!-- Modal for Yunita Inesis -->
+    <div id="yunita" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('yunita')">&times;</span>
+            <section class="student-detail">
+                <h2>Nama: Yunita Inesis Putri Cahyani</h2>
+                <img src="images/inezzzzz.jpeg" alt="Foto Mahasiswa" class="student-photo">
+                <p><strong>Usia:</strong> 17 tahun</p>
+                <p><strong>Jurusan:</strong> Teknik Informatika</p>
+                <p><strong>Universitas:</strong> Politeknik Indonusa Surakarta</p>
+                <p><strong>Hobi:</strong> Scroll TikTok, Drakoran</p>
+                <h3>Proyek dan Pengalaman:</h3>
+                <ul>
+                    <li><strong>Proyek Aplikasi Perpustakaan:</strong> Membuat aplikasi perpustakaan berbasis web menggunakan HTML, CSS, dan JavaScript.</li>
+                    <li><strong>Proyek Aplikasi Mobile:</strong> Mengembangkan aplikasi mobile untuk manajemen tugas harian menggunakan Flutter.</li>
+                    <li><strong>Internship di Perusahaan ABC:</strong> Berpengalaman sebagai intern di perusahaan ABC, bekerja pada pengembangan sistem backend menggunakan Node.js.</li>
+                </ul>
+                <h3>Kontak:</h3>
+                <p><strong>Email:</strong> yunitaputri678@gmail.com</p>
+                <p><strong>Telepon:</strong> <a href="https://wa.me/+6289587127612" target="_blank">+62 895-7123-1876</a></p>
+                <a href="index.html"><button>Kembali ke Portofolio Siswa</button></a>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        function openModal(studentId) {
+            document.getElementById(studentId).style.display = 'block';
+        }
+
+        function closeModal(studentId) {
+            document.getElementById(studentId).style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                closeModal(event.target.id);
+            }
+        }
+    </script>
 </body>
 </html>
