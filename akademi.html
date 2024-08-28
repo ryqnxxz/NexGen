@@ -1,99 +1,305 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Politeknik Indonusa Surakarta</title>
+    <title>Akademik</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/logo.jpg" type="image/jpg">
+    <link rel="icon" href="images/NexGen.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(to bottom, #010239, #202121);
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+    <style>
+        .program-card:hover {
+            transform: translateY(-10px);
+        }
+        .program-card h2 {
+            margin-top: 0;
+        }
+        .detail-button {
+            display: block;
+            margin-top: 10px;
+            background-color: #007bff;
+            color: rgb(255, 255, 255);
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .detail-button:hover {
+            background-color: #0056b3;
+            color: rgb(255, 255, 255);
+        }
+        .modal-container {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(255, 255, 255, 0);
+            background-color: rgba(255, 255, 255, 0);
+            padding-top: 60px;
+        }
+        .modal {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 800px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #88888800;
+            width: 80%;
+            max-width: 800px;
+            color: black;
+        }
+        .modal-content h2 {
+            color: black;
+        }
+        .modal-content p {
+            color: black;
+        }
+        .modal-content strong {
+            color: black;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
-<body>
+<body class="akademi">
     <div class="sidebar">
-        <div class="profile">
+        <div class="logo">
+            <img src="images/NexGen.png" alt="NexGen Logo">
             <h1>NexGen Website</h1>
         </div>
+        <div class="separator"></div>
         <nav>
             <ul>
-                <li><a href="index.html"><i class="fas fa-house"></i> Home</a></li>
-                <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
                 <li><a href="akademi.html" class="active"><i class="fas fa-graduation-cap"></i> Akademik</a></li>
-                <li><a href="location.html"><i class="fas fa-map-marker-alt"></i> location</a></li>
+                <li><a href="location.html"><i class="fas fa-map-marker-alt"></i> Location</a></li>
+                <li><a href="media.html"><i class="fas fa-photo-video"></i> <span>Media</span></a></li>
             </ul>
         </nav>
+        <div class="social-media">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.tiktok.com/@publicgmc"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/poltek_indonusa/"><i class="fab fa-instagram"></i></a>
+        </div>
         <div class="copyright">
-            <p>&copy; NexGen</p>
+            <p>&copy; 2023 NexGen</p>
         </div>
     </div>
 
     <div class="main-content">
         <header>
-            <h1>Jurusan Politek Indonusa Surakarta.</h1>
-            <p>Di Polinus ada beberapa jurusan yang banyak di Minati lho, Ayo Cek Sekarang!.</p>
+            <h1>Program Studi Akademik</h1>
+            <p>Temukan informasi detail tentang program studi yang tersedia di Politeknik Indonusa Surakarta.</p>
         </header>
-        
-        <div class="news">
-            <h2>S1 TRPL</h2>
-            <article class="news-item">
+
+        <div class="program-container">
+            <div class="program-card">
+                <h2>S1 TRPL</h2>
                 <h3>Teknologi Rekayasa Perangkat Lunak (S1 Terapan)</h3>
-                <p>Program Studi Teknik Rekayasa Perangkat Lunak di Politeknik Indonusa Surakarta
-                     (Polinusa) adalah salah satu program studi yang fokus pada pengembangan perangkat lunak dan teknologi informasi.</p>
-                     <button class="detail-button" data-program="Teknologi Informasi">Lihat Detail</button>
+                <p>Program Studi Teknik Rekayasa Perangkat Lunak di Politeknik Indonusa Surakarta (Polinusa) adalah salah satu program studi yang fokus pada pengembangan perangkat lunak dan teknologi informasi.</p>
+                <div class="button-container">
+                    <button class="detail-button" onclick="openModal('modal1')">Lihat Detail</button>
+                </div>
+            </div>
+
+            <div class="program-card">
+                <h2>S1 TRO</h2>
+                <h3>Teknologi Rekayasa Otomotif (S1 Terapan)</h3>
+                <p>Program studi ini memfokuskan pada keterampilan teknis dalam desain, perbaikan, dan pemeliharaan kendaraan bermotor. Mahasiswa belajar tentang prinsip dasar mesin, teknologi sistem kelistrikan.</p>
+                <div class="button-container">
+                    <button class="detail-button" onclick="openModal('modal2')">Lihat Detail</button>
+                </div>
+            </div>
+
+            <div class="program-card">
+                <h2>S1 PM</h2>
+                <h3>Produksi Media (S1 Terapan)</h3>
+                <p>Program studi ini mengajarkan keterampilan dalam pembuatan, desain, dan pengelolaan berbagai jenis media, termasuk media cetak, digital, dan audio-visual. Mahasiswa akan mempelajari teknik-teknik produksi yang mencakup desain grafis, editing video, serta produksi audio.</p>
+                <div class="button-container">
+                    <button class="detail-button" onclick="openModal('modal3')">Lihat Detail</button>
+                </div>
+            </div>
+
+            <div class="program-card">
+                <h2>D3 PH</h2>
+                <h3>Perhotelan (D3)</h3>
+                <p>Program studi ini berfokus pada manajemen dan operasional dalam industri perhotelan, termasuk layanan pelanggan, manajemen hotel, dan operasional restoran. Mahasiswa akan mempelajari teknik-teknik manajerial dan layanan untuk meningkatkan pengalaman tamu.</p>
+                <div class="button-container">
+                    <button class="detail-button" onclick="openModal('modal4')">Lihat Detail</button>
+                </div>
+            </div>
+
+            <div class="program-card">
+                <h2>D3 FM</h2>
+                <h3>Farmasi (D3)</h3>
+                <p>Program studi ini fokus pada ilmu farmasi yang mencakup produksi, pengelolaan, dan penggunaan obat-obatan. Mahasiswa belajar tentang formulasi obat, teknologi farmasi, serta pengelolaan apotek.</p>
+                <div class="button-container">
+                    <button class="detail-button" onclick="openModal('modal5')">Lihat Detail</button>
+                </div>
+            </div>
+
+            <div class="program-card">
+                <h2>S1 MIK</h2>
+                <h3>Teknologi Informasi Kesehatan (S1 Terapan)</h3>
+                <p>Program studi ini memfokuskan pada pengelolaan dan analisis informasi dalam sektor kesehatan, termasuk sistem informasi kesehatan dan data kesehatan.</p>
+                <div class="button-container">
+                    <button class="detail-button" onclick="openModal('modal6')">Lihat Detail</button>
+                </div>
+            </div>
+
+            <div class="program-card">
+                <h2>S1 TLM</h2>
+                <h3>Teknologi Laboratorium Medis (S1 Terapan)</h3>
+                <p>Program studi ini mengajarkan keterampilan dalam analisis dan diagnostik laboratorium medis. Mahasiswa mempelajari teknik-teknik analisis untuk mendukung diagnosis medis dan pengelolaan laboratorium.</p>
+                <div class="button-container">
+                    <button class="detail-button" onclick="openModal('modal7')">Lihat Detail</button>
+                </div>
+            </div>
         </div>
 
-        <div class="news">
-          <h2>S1 TRO</h2>
-          <article class="news-item">
-              <h3>Teknologi Rekayasa Otomotif (S1 Terapan)</h3>
-              <p>Program studi ini memfokuskan pada keterampilan teknis dalam desain, perbaikan,
-                 dan pemeliharaan kendaraan bermotor. Mahasiswa belajar tentang prinsip dasar mesin, 
-                 teknologi sistem kelistrikan, serta teknik-teknik diagnostik untuk mengidentifikasi dan memperbaiki masalah pada kendaraan.</p>
-      </div>
+        <!-- Modal containers -->
+        <div class="modal-container">
+            <!-- Modal 1 -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal1')">&times;</span>
+                    <h2>Teknologi Rekayasa Perangkat Lunak (S1 Terapan)</h2>
+                    <p><strong>Tujuan:</strong> Menyediakan pendidikan dan pelatihan dalam desain, pengembangan, dan pemeliharaan perangkat lunak yang berkualitas. Program ini bertujuan untuk mempersiapkan mahasiswa menjadi profesional yang kompeten di bidang rekayasa perangkat lunak.</p>
+                    <p><strong>Kurikulum:</strong> Mencakup mata kuliah seperti analisis dan desain perangkat lunak, pemrograman, pengujian perangkat lunak, manajemen proyek perangkat lunak, serta teknologi web dan mobile. Mahasiswa juga belajar tentang metode rekayasa perangkat lunak, pengembangan aplikasi, dan keamanan perangkat lunak.</p>
+                    <p><strong>Fasilitas:</strong> Dilengkapi dengan laboratorium komputer dan perangkat lunak terbaru untuk mendukung praktik dan pengembangan keterampilan teknis mahasiswa.</p>
+                    <p><strong>Kompetensi Lulusan:</strong> Mahasiswa diharapkan mampu merancang, mengembangkan, dan mengelola proyek perangkat lunak dengan efisien, serta memiliki keterampilan dalam pemrograman dan teknologi terbaru yang dibutuhkan di industri.</p>
+                    <p><strong>Peluang Kerja:</strong> Lulusan dapat bekerja di berbagai bidang, termasuk pengembangan perangkat lunak, manajemen proyek IT, analisis sistem, dan konsultasi teknologi informasi di perusahaan teknologi, start-up, dan lembaga lainnya.</p>
+                </div>
+            </div>
 
-      <div class="news">
-        <h2>S1 PM</h2>
-        <article class="news-item">
-            <h3>Produksi Media (S1 Terapan)</h3>
-            <p>Program studi ini mengajarkan keterampilan dalam pembuatan, desain, dan pengelolaan berbagai jenis media, termasuk media
-                 cetak, digital, dan audio-visual. Mahasiswa akan mempelajari teknik-teknik produksi yang mencakup desain grafis,
-                  editing video, serta produksi audio.</p>
-    </div>
+            <!-- Modal 2 -->
+            <div id="modal2" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal2')">&times;</span>
+                    <h2>Teknologi Rekayasa Otomotif (S1 Terapan)</h2>
+                    <p><strong>Penjelasan Detail:</strong> Program studi ini memfokuskan pada keterampilan teknis dalam desain, perbaikan, dan pemeliharaan kendaraan bermotor. Mahasiswa belajar tentang prinsip dasar mesin, teknologi sistem kelistrikan, serta teknik-teknik diagnostik untuk mengidentifikasi dan memperbaiki masalah pada kendaraan.</p>
+                    <p><strong>Tujuan:</strong> Menyiapkan ahli otomotif yang kompeten dalam menerapkan teknologi terbaru, memelihara, dan memperbaiki kendaraan dengan standar industri yang tinggi.</p>
+                    <p><strong>Kurikulum:</strong> Mencakup mata kuliah seperti Teknologi Mesin Otomotif, Sistem Kelistrikan Kendaraan, Diagnostik dan Perbaikan Mesin, dan Sistem Transmisi dan Suspensi.</p>
+                    <p><strong>Fasilitas:</strong> Laboratorium otomotif yang dilengkapi dengan peralatan terbaru untuk perbaikan kendaraan, serta ruang praktik untuk simulasi dan pengujian.</p>
+                    <p><strong>Kompetensi Lulusan:</strong> Mahasiswa mampu melakukan perbaikan dan pemeliharaan kendaraan bermotor, memahami sistem kelistrikan, dan menggunakan peralatan diagnostik dengan efektif.</p>
+                    <p><strong>Peluang Kerja:</strong> Bekerja di bengkel otomotif, dealer kendaraan, perusahaan otomotif, serta lembaga layanan kendaraan.</p>
+                </div>
+            </div>
 
-    <div class="news">
-        <h2>D3 PH</h2>
-        <article class="news-item">
-            <h3>Perhotelan (D3)</h3>
-            <p>Program studi ini berfokus pada manajemen dan operasional dalam industri perhotelan, termasuk layanan pelanggan,
-                 manajemen hotel, dan operasional restoran. Mahasiswa akan mempelajari teknik-teknik manajerial dan layanan untuk 
-                 meningkatkan pengalaman tamu.</p>
-    </div>
+            <!-- Modal 3 -->
+            <div id="modal3" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal3')">&times;</span>
+                    <h2>Produksi Media (S1 Terapan)</h2>
+                    <p><strong>Penjelasan Detail:</strong> Program studi ini mengajarkan keterampilan dalam pembuatan, desain, dan pengelolaan berbagai jenis media, termasuk media cetak, digital, dan audio-visual. Mahasiswa akan mempelajari teknik-teknik produksi yang mencakup desain grafis, editing video, serta produksi audio.</p>
+                    <p><strong>Tujuan:</strong> Mengembangkan keterampilan kreatif dan teknis dalam industri media untuk memproduksi konten yang berkualitas dan efektif dalam berbagai platform.</p>
+                    <p><strong>Kurikulum:</strong> Mencakup mata kuliah seperti Desain Grafis, Produksi Video dan Film, Editing Audio, dan Manajemen Produksi Media.</p>
+                    <p><strong>Fasilitas:</strong> Studio media, perangkat lunak editing profesional, dan peralatan produksi terbaru untuk mendukung proyek kreatif mahasiswa.</p>
+                    <p><strong>Kompetensi Lulusan:</strong> Mahasiswa dapat merancang, memproduksi, dan mengelola berbagai jenis media, serta menggunakan perangkat lunak dan peralatan produksi dengan mahir.</p>
+                    <p><strong>Peluang Kerja:</strong> Studio produksi media, agensi periklanan, perusahaan media, serta industri kreatif.</p>
+                </div>
+            </div>
 
-    <div class="news">
-        <h2>D3 FM</h2>
-        <article class="news-item">
-            <h3>Farmasi (D3)</h3>
-            <p>Program studi ini fokus pada ilmu farmasi yang mencakup produksi, pengelolaan, dan penggunaan obat-obatan. 
-                Mahasiswa belajar tentang formulasi obat, teknologi farmasi, serta pengelolaan apotek.</p>
-    </div>
+            <!-- Modal 4 -->
+            <div id="modal4" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal4')">&times;</span>
+                    <h2>Perhotelan (D3)</h2>
+                    <p><strong>Penjelasan Detail:</strong> Program studi ini berfokus pada manajemen dan operasional dalam industri perhotelan, termasuk layanan pelanggan, manajemen hotel, dan operasional restoran. Mahasiswa akan mempelajari teknik-teknik manajerial dan layanan untuk meningkatkan pengalaman tamu.</p>
+                    <p><strong>Tujuan:</strong> Menyiapkan tenaga kerja profesional yang kompeten dalam manajemen hotel dan layanan pelanggan untuk menghadapi tuntutan industri perhotelan.</p>
+                    <p><strong>Kurikulum:</strong> Mencakup mata kuliah seperti Manajemen Hotel, Layanan Pelanggan, Makanan dan Minuman, dan Pemasaran Perhotelan.</p>
+                    <p><strong>Fasilitas:</strong> Fasilitas praktik termasuk dapur, restoran mini, dan ruang tamu simulasi untuk memberikan pengalaman langsung dalam operasional hotel.</p>
+                    <p><strong>Kompetensi Lulusan:</strong> Mahasiswa mampu mengelola berbagai aspek operasional hotel, memberikan layanan pelanggan berkualitas, dan mengelola makanan serta minuman dengan efisien.</p>
+                    <p><strong>Peluang Kerja:</strong> Hotel, resort, restoran, perusahaan manajemen perhotelan, dan event organizer.</p>
+                </div>
+            </div>
 
-    <div class="news">
-        <h2>S1 MIK</h2>
-        <article class="news-item">
-            <h3>Teknologi informasi Kesehatan (S1 Terapan)</h3>
-            <p>Program studi ini memfokuskan pada pengelolaan dan analisis informasi dalam sektor kesehatan, 
-                termasuk sistem informasi kesehatan dan data kesehatan. Mahasiswa akan mempelajari bagaimana 
-                teknologi informasi dapat diterapkan untuk meningkatkan layanan kesehatan.</p>
-    </div>
+            <!-- Modal 5 -->
+            <div id="modal5" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal5')">&times;</span>
+                    <h2>Farmasi (D3)</h2>
+                    <p><strong>Penjelasan Detail:</strong> Program studi ini fokus pada ilmu farmasi yang mencakup produksi, pengelolaan, dan penggunaan obat-obatan. Mahasiswa belajar tentang formulasi obat, teknologi farmasi, serta pengelolaan apotek.</p>
+                    <p><strong>Tujuan:</strong> Membekali mahasiswa dengan pengetahuan dan keterampilan dalam produksi obat, manajemen apotek, dan penggunaan obat yang efektif serta aman.</p>
+                    <p><strong>Kurikulum:</strong> Mencakup mata kuliah seperti Formulasi dan Teknologi Farmasi, Farmakologi dan Terapi Obat, Manajemen Apotek, dan Pengujian Obat dan Kontrol Kualitas.</p>
+                    <p><strong>Fasilitas:</strong> Laboratorium farmasi dengan peralatan dan bahan untuk pengujian dan formulasi obat.</p>
+                    <p><strong>Kompetensi Lulusan:</strong> Mahasiswa dapat memproduksi, mengelola, dan mendistribusikan obat serta memberikan informasi terkait penggunaan obat yang tepat.</p>
+                </div>
+            </div>
 
-    <div class="news">
-        <h2>S1 TLM</h2>
-        <article class="news-item">
-            <h3>Teknologi Labolatorium Medis (S1 Terapan)</h3>
-            <p>Program studi ini mengajarkan keterampilan dalam analisis dan diagnostik laboratorium medis.
-                Mahasiswa mempelajari teknik-teknik analisis untuk mendukung diagnosis medis dan pengelolaan laboratorium.</p>
-    </div>
+            <!-- Modal 6 -->
+            <div id="modal6" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal6')">&times;</span>
+                    <h2>Teknologi Informasi Kesehatan (S1 Terapan)</h2>
+                    <p><strong>Penjelasan Detail:</strong> Program studi ini memfokuskan pada pengelolaan dan analisis informasi dalam sektor kesehatan, termasuk sistem informasi kesehatan dan data kesehatan. Mahasiswa akan mempelajari bagaimana teknologi informasi dapat diterapkan untuk meningkatkan layanan kesehatan.</p>
+                    <p><strong>Tujuan:</strong> Menyiapkan tenaga profesional yang mampu mengelola dan menganalisis informasi kesehatan untuk meningkatkan efisiensi dan kualitas layanan kesehatan.</p>
+                    <p><strong>Kurikulum:</strong> Mencakup mata kuliah seperti Sistem Informasi Kesehatan, Analisis Data Kesehatan, dan Teknologi Informasi untuk Layanan Kesehatan.</p>
+                    <p><strong>Fasilitas:</strong> Laboratorium komputer dengan perangkat lunak khusus untuk analisis data kesehatan.</p>
+                    <p><strong>Kompetensi Lulusan:</strong> Mahasiswa diharapkan mampu mengelola dan menganalisis informasi kesehatan, serta memahami aplikasi teknologi informasi dalam sektor kesehatan.</p>
+                </div>
+            </div>
 
+            <!-- Modal 7 -->
+            <div id="modal7" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal7')">&times;</span>
+                    <h2>Teknologi Laboratorium Medis (S1 Terapan)</h2>
+                    <p><strong>Penjelasan Detail:</strong> Program studi ini mengajarkan keterampilan dalam analisis dan diagnostik laboratorium medis. Mahasiswa mempelajari teknik-teknik analisis untuk mendukung diagnosis medis dan pengelolaan laboratorium.</p>
+                    <p><strong>Tujuan:</strong> Membekali mahasiswa dengan keterampilan dan pengetahuan dalam analisis laboratorium medis untuk mendukung proses diagnosis dan pengelolaan kesehatan.</p>
+                    <p><strong>Kurikulum:</strong> Mencakup mata kuliah seperti Analisis Laboratorium, Teknik Diagnostik Medis, dan Pengelolaan Laboratorium.</p>
+                    <p><strong>Fasilitas:</strong> Laboratorium medis dengan peralatan diagnostik dan analisis terkini.</p>
+                    <p><strong>Kompetensi Lulusan:</strong> Mahasiswa diharapkan mampu melakukan analisis laboratorium medis dengan akurat, serta memahami teknik diagnostik untuk mendukung proses medis.</p>
+                </div>
+            </div>
+        </div>
     </div>
+    <script src="script.js"></script>
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+            document.querySelector('.modal-container').style.display = "block";
+        }
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+            document.querySelector('.modal-container').style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal-container')) {
+                closeModal(event.target.querySelector('.modal').id);
+            }
+        }
+    </script>
 </body>
 </html>

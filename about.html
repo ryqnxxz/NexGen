@@ -3,318 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>Tentang Kami - NexGen Website</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/logo.jpg" type="image/jpg">
+    <link rel="icon" href="images/NexGen.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        .student-card {
-            position: relative;
-            overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            transition: transform 0.3s ease;
+        body {
+            background-color: white;
+            color: #333;
         }
-
-        .student-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .student-card img {
-            width: 100%;
-            height: auto;
-        }
-
-        .student-card .student-info {
+        .main-content {
+            text-align: center;
             padding: 20px;
+            margin-left: 200px; /* Sesuaikan dengan lebar sidebar baru */
+            color: white; /* Menambahkan ini untuk mengubah warna teks menjadi putih */
         }
-
-        .student-card .student-info h3 {
-            margin: 0;
-            color: #007bff;
+        .main-content h1 {
+            color: white; /* Menambahkan ini untuk mengubah warna judul menjadi putih */
         }
-
-        .student-card .student-info p {
+        .team-members {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .developers {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .member-card {
+            width: 250px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            color: white;
+        }
+        .leader-card {
+            margin-bottom: 20px;
+        }
+        .member-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .member-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+        .member-role {
+            font-style: italic;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .card-divider {
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
             margin: 10px 0;
         }
-
-        .detail-button {
-            display: inline-block;
-            background-color: #007bff;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
+        .member-details {
+            text-align: left;
+            font-size: 14px;
+        }
+        .member-details p {
+            margin: 8px 0;
+        }
+        .whatsapp-link {
+            color: #25D366;
             text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
+            transition: color 0.3s ease;
         }
 
-        .detail-button:hover {
-            background-color: #0056b3;
+        .whatsapp-link:hover {
+            color: #128C7E;
+            text-decoration: underline;
         }
 
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgb(0,0,0);
-            background-color: rgba(0,0,0,0.4);
-            padding-top: 60px;
+        @media (max-width: 768px) {
+            .developers {
+                flex-direction: column;
+                align-items: center;
+            }
+            .member-card {
+                width: 80%;
+                max-width: 300px;
+            }
         }
-
-        .modal-content {
-            background-color: #fefefe;
-            margin: 5% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 800px;
-        }
-
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        .student-photo {
-            width: 100%;
-            height: auto;
+        
+        .red-o {
+            color: red;
         }
     </style>
 </head>
 <body>
     <div class="sidebar">
-        <div class="profile">
+        <div class="logo">
+            <img src="images/NexGen.png" alt="NexGen Logo">
             <h1>NexGen Website</h1>
         </div>
+        <div class="separator"></div>
         <nav>
             <ul>
                 <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="about.html" class="active"><i class="fas fa-user"></i> About</a></li>
-                <li><a href="akademi.html"><i class="fas fa-briefcase"></i> Akademik</a></li>
+                <li><a href="about.html" class="active"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="akademi.html"><i class="fas fa-graduation-cap"></i> Akademik</a></li>
                 <li><a href="location.html"><i class="fas fa-map-marker-alt"></i> Location</a></li>
+                <li><a href="media.html"><i class="fas fa-photo-video"></i> <span>Media</span></a></li>
             </ul>
         </nav>
+        <div class="social-media">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.tiktok.com/@publicgmc"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/poltek_indonusa/"><i class="fab fa-instagram"></i></a>
+        </div>
         <div class="copyright">
-            <p>&copy; NexGen</p>
+            <p>&copy; 2023 NexGen</p>
         </div>
     </div>
 
     <div class="main-content">
-        <header>
-            <h1>Ini adalah Profile Para pendiri Website Ini</h1>
-            <p>Kelompok kami di namai NexGen yang berarti Generasi Terdepan. Klik tombol 'Lihat Detail' untuk informasi lebih lanjut.</p>
-        </header>
-
-        <section class="intro">
-            <h2>Daftar Siswa</h2>
-            <!-- Student Card 1 -->
-            <div class="student-card">
-                <img src="images/ayu.jpeg" alt="Foto Mahasiswa">
-                <div class="student-info">
-                    <h3>Ayu Anggrahini</h3>
-                    <p>Teknik Informatika</p>
-                    <a href="#" class="detail-button" onclick="openModal('ayu')">Lihat Detail</a>
+        <h1 style="color: white;">Tentang Tim NexGen Politeknik Ind<span class="red-o">o</span>nusa Surakarta</h1>
+        <p style="color: white;">Kami adalah tim mahasiswa Teknik Informatika yang bersemangat dalam pengembangan web dan teknologi terkini.</p>
+        
+        <div class="team-members">
+            <div class="member-card leader-card">
+                <img src="images/ryan.jpeg" alt="Ryan Waskito Aji" class="member-photo">
+                <div class="member-name">Ryan Waskito Aji</div>
+                <div class="member-role">Ketua Tim</div>
+                <hr class="card-divider">
+                <div class="member-details">
+                    <p><strong>Nama Lengkap:</strong> Ryan Waskito Aji</p>
+                    <p><strong>Umur:</strong> 18 tahun</p>
+                    <p><strong>Email:</strong> ryansss69@gmail.com</p>
+                    <p><strong>Telepon:</strong> <a href="https://wa.me/081234567890" target="_blank" class="whatsapp-link">081234567890</a></p>
+                    <p><strong>Tugas:</strong> Project Manager</p>
                 </div>
             </div>
-
-            <!-- Student Card 2 -->
-            <div class="student-card">
-                <img src="images/ryan.jpeg" alt="Foto Mahasiswa">
-                <div class="student-info">
-                    <h3>Ryan Waskito Aji</h3>
-                    <p>Teknik Informatika</p>
-                    <a href="#" class="detail-button" onclick="openModal('ryan')">Lihat Detail</a>
+            
+            <div class="developers">
+                <div class="member-card">
+                    <img src="images/ayu.jpeg" alt="Ayu Anggrahini" class="member-photo">
+                    <div class="member-name">Ayu Anggrahini</div>
+                    <div class="member-role">developer</div>
+                    <hr class="card-divider">
+                    <div class="member-details">
+                        <p><strong>Nama Lengkap:</strong> Ayu Anggrahini</p>
+                        <p><strong>Umur:</strong> 18 tahun</p>
+                        <p><strong>Email:</strong> ayuanggrahh@gmail.com</p>
+                        <p><strong>Telepon:</strong> <a href="https://wa.me/081234567891" target="_blank" class="whatsapp-link">081234567891</a></p>
+                        <p><strong>Tugas:</strong> Front-End Developer</p>
+                    </div>
+                </div>
+                <div class="member-card">
+                    <img src="images/llintang.jpeg" alt="Lintang Cahya Ardaputri" class="member-photo">
+                    <div class="member-name">Lintang Cahya Ardaputri</div>
+                    <div class="member-role">Designer</div>
+                    <hr class="card-divider">
+                    <div class="member-details">
+                        <p><strong>Nama Lengkap:</strong> Lintang Cahya Ardaputri</p>
+                        <p><strong>Umur:</strong> 18 tahun</p>
+                        <p><strong>Email:</strong> lintangcahya@gamil.com</p>
+                        <p><strong>Telepon:</strong> <a href="https://wa.me/081234567892" target="_blank" class="whatsapp-link">081234567892</a></p>
+                        <p><strong>Tugas:</strong> UI/UX Designer</p>
+                    </div>
+                </div>
+                <div class="member-card">
+                    <img src="images/may faniiiiiiiiiiiiiiiiiii.jpeg" alt="May Fani Fajar Wati" class="member-photo">
+                    <div class="member-name">May Fani Fajar Wati</div>
+                    <div class="member-role">Developer</div>
+                    <hr class="card-divider">
+                    <div class="member-details">
+                        <p><strong>Nama Lengkap:</strong> May Fani Fajar Wati</p>
+                        <p><strong>Umur:</strong> 18 tahun</p>
+                        <p><strong>Email:</strong> mayfani@gamil.com</p>
+                        <p><strong>Telepon:</strong> <a href="https://wa.me/081234567893" target="_blank" class="whatsapp-link">081234567893</a></p>
+                        <p><strong>Tugas:</strong> CSS Specialist</p>
+                    </div>
+                </div>
+                <div class="member-card">
+                    <img src="images/inezzzzz.jpeg" alt="Yunita Inesis Putri Cahyani" class="member-photo">
+                    <div class="member-name">Yunita Inesis Putri Cahyani</div>
+                    <div class="member-role">Designer</div>
+                    <hr class="card-divider">
+                    <div class="member-details">
+                        <p><strong>Nama Lengkap:</strong> Yunita Inesis Putri Cahyani</p>
+                        <p><strong>Umur:</strong> 18 tahun</p>
+                        <p><strong>Email:</strong> yunitaines@gamil.com</p>
+                        <p><strong>Telepon:</strong> <a href="https://wa.me/081234567894" target="_blank" class="whatsapp-link">081234567894</a></p>
+                        <p><strong>Tugas:</strong> UI/UX Consistency Enforcer</p>
+                    </div>
                 </div>
             </div>
-
-            <!-- Student Card 3 -->
-            <div class="student-card">
-                <img src="images/llintang.jpeg" alt="Foto Mahasiswa">
-                <div class="student-info">
-                    <h3>Lintang Cahya Ardaputri</h3>
-                    <p>Teknik Informatika</p>
-                    <a href="#" class="detail-button" onclick="openModal('lintang')">Lihat Detail</a>
-                </div>
-            </div>
-
-            <!-- Student Card 4 -->
-            <div class="student-card">
-                <img src="images/may faniiiiiiiiiiiiiiiiiii.jpeg" alt="Foto Mahasiswa">
-                <div class="student-info">
-                    <h3>May Fani Fajar Wati</h3>
-                    <p>Teknik Informatika</p>
-                    <a href="#" class="detail-button" onclick="openModal('may')">Lihat Detail</a>
-                </div>
-            </div>
-
-            <!-- Student Card 5 -->
-            <div class="student-card">
-                <img src="images/inezzzzz.jpeg" alt="Foto Mahasiswa">
-                <div class="student-info">
-                    <h3>Yunita Inesis Putri Cahyani</h3>
-                    <p>Teknik Informatika</p>
-                    <a href="#" class="detail-button" onclick="openModal('yunita')">Lihat Detail</a>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- Modal for Ayu Anggrahini -->
-    <div id="ayu" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('ayu')">&times;</span>
-            <section class="student-detail">
-                <h2>Nama: Ayu Anggrahini</h2>
-                <img src="images/ayu.jpeg" alt="Foto Mahasiswa" class="student-photo">
-                <p><strong>Usia:</strong> 18 tahun</p>
-                <p><strong>Jurusan:</strong> Teknik Informatika</p>
-                <p><strong>Universitas:</strong> Politeknik Indonusa Surakarta</p>
-                <p><strong>Hobi:</strong> TikTokan, Musikan, Soping</p>
-                <h3>Proyek dan Pengalaman:</h3>
-                <ul>
-                    <li><strong>Proyek Aplikasi Perpustakaan:</strong> Membuat aplikasi perpustakaan berbasis web menggunakan HTML, CSS, dan JavaScript.</li>
-                    <li><strong>Proyek Aplikasi Mobile:</strong> Mengembangkan aplikasi mobile untuk manajemen tugas harian menggunakan Flutter.</li>
-                    <li><strong>Internship di Perusahaan ABC:</strong> Berpengalaman sebagai intern di perusahaan ABC, bekerja pada pengembangan sistem backend menggunakan Node.js.</li>
-                </ul>
-                <h3>Kontak:</h3>
-                <p><strong>Email:</strong> ayuuuu188@gmail.com</p>
-                <p><strong>Telepon:</strong> <a href="https://wa.me/6289571231876?text=Hai%2C%20saya%20harap%20hari%20ini%20menjadi%20lebih%20baik...%20Oh%2C%20siapa%20yang%20saya%20bercanda%3F" target="_blank">+62 859-1987-5326</a></p>
-                <a href="index.html"><button>Kembali ke Portofolio Siswa</button></a>
-            </section>
         </div>
     </div>
-
-    <!-- Modal for Ryan Waskito Aji -->
-    <div id="ryan" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('ryan')">&times;</span>
-            <section class="student-detail">
-                <h2>Nama: Ryan Waskito Aji</h2>
-                <img src="images/ryan.jpeg" alt="Foto Mahasiswa" class="student-photo">
-                <p><strong>Usia:</strong> 18 tahun</p>
-                <p><strong>Jurusan:</strong> Teknik Informatika</p>
-                <p><strong>Universitas:</strong> Politeknik Indonusa Surakarta</p>
-                <p><strong>Hobi:</strong> Gaming, Cars Spotter, Ahli Cinematic</p>
-                <h3>Proyek dan Pengalaman:</h3>
-                <ul>
-                    <li><strong>Proyek Aplikasi Perpustakaan:</strong> Membuat aplikasi perpustakaan berbasis web menggunakan HTML, CSS, dan JavaScript.</li>
-                    <li><strong>Proyek Aplikasi Mobile:</strong> Mengembangkan aplikasi mobile untuk manajemen tugas harian menggunakan Flutter.</li>
-                    <li><strong>Internship di Perusahaan ABC:</strong> Berpengalaman sebagai intern di perusahaan ABC, bekerja pada pengembangan sistem backend menggunakan Node.js.</li>
-                </ul>
-                <h3>Kontak:</h3>
-                <p><strong>Email:</strong> ryannn777@gmail.com</p>
-                <p><strong>Telepon:</strong> <a href="https://wa.me/6289571231876?text=Hai%2C%20saya%20harap%20hari%20ini%20menjadi%20lebih%20baik...%20Oh%2C%20siapa%20yang%20saya%20bercanda%3F" target="_blank">+62 895-7123-1876</a></p>
-                <a href="index.html"><button>Kembali ke Portofolio Siswa</button></a>
-            </section>
-        </div>
-    </div>
-
-    <!-- Modal for Lintang Cahya -->
-    <div id="lintang" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('lintang')">&times;</span>
-            <section class="student-detail">
-                <h2>Nama: Lintang Cahya Ardaputri</h2>
-                <img src="images/llintang.jpeg" alt="Foto Mahasiswa" class="student-photo">
-                <p><strong>Usia:</strong> 17 tahun</p>
-                <p><strong>Jurusan:</strong> Teknik Informatika</p>
-                <p><strong>Universitas:</strong> Politeknik Indonusa Surakarta</p>
-                <p><strong>Hobi:</strong> Scroll Instagram, Nonton Windah Batubara</p>
-                <h3>Proyek dan Pengalaman:</h3>
-                <ul>
-                    <li><strong>Proyek Aplikasi Perpustakaan:</strong> Membuat aplikasi perpustakaan berbasis web menggunakan HTML, CSS, dan JavaScript.</li>
-                    <li><strong>Proyek Aplikasi Mobile:</strong> Mengembangkan aplikasi mobile untuk manajemen tugas harian menggunakan Flutter.</li>
-                    <li><strong>Internship di Perusahaan ABC:</strong> Berpengalaman sebagai intern di perusahaan ABC, bekerja pada pengembangan sistem backend menggunakan Node.js.</li>
-                </ul>
-                <h3>Kontak:</h3>
-                <p><strong>Email:</strong> lintangkejora111@gmail.com</p>
-                <p><strong>Telepon:</strong> <a href="https://wa.me/+6282133456789" target="_blank">+62 8282-1334-5679</a></p>
-                <a href="index.html"><button>Kembali ke Portofolio Siswa</button></a>
-            </section>
-        </div>
-    </div>
-
-    <!-- Modal for May Fani -->
-    <div id="may" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('may')">&times;</span>
-            <section class="student-detail">
-                <h2>Nama: May Fani Fajar Wati</h2>
-                <img src="images/may faniiiiiiiiiiiiiiiiiii.jpeg" alt="Foto Mahasiswa" class="student-photo">
-                <p><strong>Usia:</strong> 19 tahun</p>
-                <p><strong>Jurusan:</strong> Teknik Informatika</p>
-                <p><strong>Universitas:</strong> Politeknik Indonusa Surakarta</p>
-                <p><strong>Hobi:</strong> Scroll TikTok, Drakoran, Tripbis</p>
-                <h3>Proyek dan Pengalaman:</h3>
-                <ul>
-                    <li><strong>Proyek Aplikasi Perpustakaan:</strong> Membuat aplikasi perpustakaan berbasis web menggunakan HTML, CSS, dan JavaScript.</li>
-                    <li><strong>Proyek Aplikasi Mobile:</strong> Mengembangkan aplikasi mobile untuk manajemen tugas harian menggunakan Flutter.</li>
-                    <li><strong>Internship di Perusahaan ABC:</strong> Berpengalaman sebagai intern di perusahaan ABC, bekerja pada pengembangan sistem backend menggunakan Node.js.</li>
-                </ul>
-                <h3>Kontak:</h3>
-                <p><strong>Email:</strong> melani765@gmail.com</p>
-                <p><strong>Telepon:</strong> <a href="https://wa.me/+6281234265379" target="_blank">+62 8123-4265-379</a></p>
-                <a href="index.html"><button>Kembali ke Portofolio Siswa</button></a>
-            </section>
-        </div>
-    </div>
-
-    <!-- Modal for Yunita Inesis -->
-    <div id="yunita" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('yunita')">&times;</span>
-            <section class="student-detail">
-                <h2>Nama: Yunita Inesis Putri Cahyani</h2>
-                <img src="images/inezzzzz.jpeg" alt="Foto Mahasiswa" class="student-photo">
-                <p><strong>Usia:</strong> 17 tahun</p>
-                <p><strong>Jurusan:</strong> Teknik Informatika</p>
-                <p><strong>Universitas:</strong> Politeknik Indonusa Surakarta</p>
-                <p><strong>Hobi:</strong> Scroll TikTok, Drakoran</p>
-                <h3>Proyek dan Pengalaman:</h3>
-                <ul>
-                    <li><strong>Proyek Aplikasi Perpustakaan:</strong> Membuat aplikasi perpustakaan berbasis web menggunakan HTML, CSS, dan JavaScript.</li>
-                    <li><strong>Proyek Aplikasi Mobile:</strong> Mengembangkan aplikasi mobile untuk manajemen tugas harian menggunakan Flutter.</li>
-                    <li><strong>Internship di Perusahaan ABC:</strong> Berpengalaman sebagai intern di perusahaan ABC, bekerja pada pengembangan sistem backend menggunakan Node.js.</li>
-                </ul>
-                <h3>Kontak:</h3>
-                <p><strong>Email:</strong> yunitaputri678@gmail.com</p>
-                <p><strong>Telepon:</strong> <a href="https://wa.me/+6289587127612" target="_blank">+62 895-7123-1876</a></p>
-                <a href="index.html"><button>Kembali ke Portofolio Siswa</button></a>
-            </section>
-        </div>
-    </div>
-
-    <script>
-        function openModal(studentId) {
-            document.getElementById(studentId).style.display = 'block';
-        }
-
-        function closeModal(studentId) {
-            document.getElementById(studentId).style.display = 'none';
-        }
-
-        window.onclick = function(event) {
-            if (event.target.classList.contains('modal')) {
-                closeModal(event.target.id);
-            }
-        }
-    </script>
 </body>
 </html>

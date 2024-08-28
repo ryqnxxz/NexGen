@@ -6,40 +6,81 @@
     <title>Politeknik Indonusa Surakarta</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/logo.jpg" type="image/jpg">
+    <link rel="icon" href="images/NexGen.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(to bottom, #010239, #202121);
+            background-size: cover;
+            background-position: center;
+        }
+        .indonusa {
+            color: white;
+        }
+        .indonusa .red-o {
+            color: red;
+        }
+        .separator {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+            margin: 10px 0;
+        }
+    </style>
 </head>
-<body>
+<body class="location">
     <div class="sidebar">
-        <div class="profile">
+        <div class="logo">
+            <img src="images/NexGen.png" alt="NexGen Logo">
             <h1>NexGen Website</h1>
         </div>
+        <div class="separator"></div>
         <nav>
             <ul>
-                <li><a href="index.html"><i class="fas fa-house"></i> Home</a></li>
-                <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
                 <li><a href="akademi.html"><i class="fas fa-graduation-cap"></i> Akademik</a></li>
-                <li><a href="location.html" class="active"><i class="fas fa-map-marker-alt"></i> location</a></li>
+                <li><a href="location.html" class="active"><i class="fas fa-map-marker-alt"></i> Location</a></li>
+                <li><a href="media.html"><i class="fas fa-photo-video"></i> <span>Media</span></a></li>
             </ul>
         </nav>
+        <div class="social-media">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.tiktok.com/@publicgmc"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/poltek_indonusa/"><i class="fab fa-instagram"></i></a>
+        </div>
         <div class="copyright">
-            <p>&copy; NexGen</p>
+            <p>&copy; 2023 NexGen</p>
         </div>
     </div>
 
     <div class="main-content">
         <header>
-            <h1>Lokasi Kampus Politeknik Indonusa Surakarta</h1>
+            <h1>Lokasi Kampus Politeknik <span class="indonusa">Ind<span class="red-o">o</span>nusa</span> Surakarta</h1>
             <p>Bukan hanya kampus vokasi terbaik lho, tapi kamu tau ga kalo di polinus ternyata ada 2 kampus yang berbeda tempat</p>
         </header>
 
         <div class="maps-container">
-            <!-- Peta Lokasi Kampus Politeknik Indonusa Surakarta ke-1 -->
-            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d677.0552206856415!2d110.80123925387839!3d-7.568000404546688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a142c9ed1b613%3A0x4d36d7c759169f16!2sPoliteknik%20Indonusa%20Surakarta!5e0!3m2!1sen!2sid!4v1724335419400!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            
-            <!-- Peta Lokasi Kampus Politeknik Indonusa Surakarta ke-2 -->
-            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.9685060189217!2d110.80075407400535!3d-7.57840709243595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a15d7660fa171%3A0x3b001f22361977a6!2sKampus%202!5e0!3m2!1sen!2sid!4v1724337054732!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="map-box">
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d677.0552206856415!2d110.80123925387839!3d-7.568000404546688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a142c9ed1b613%3A0x4d36d7c759169f16!2sPoliteknik%20Indonusa%20Surakarta!5e0!3m2!1sen!2sid!4v1724335419400!5m2!1sen!2sid" width="450" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <h3>Kampus 1</h3>
+                <div class="description-box">
+                    <p>Kampus 1 Politeknik Indonusa Surakarta terletak di pusat kota.</p>
+                    <hr class="separator">
+                    <p>Tepatnya di Jl. K.H Samanhudi No.31, Bumi, Kec. Laweyan, Kota Surakarta, Jawa Tengah 57142.</p>
+                </div>
+            </div>
+            <div class="map-box">
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.9685060189217!2d110.80075407400535!3d-7.57840709243595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a15d7660fa171%3A0x3b001f22361977a6!2sKampus%202!5e0!3m2!1sen!2sid!4v1724337054732!5m2!1sen!2sid" width="450" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <h3>Kampus 2</h3>
+                <div class="description-box">
+                    <p>Kampus 2 Politeknik Indonusa Surakarta berada di lingkungan yang lebih tenang.</p>
+                    <hr class="separator">
+                    <p>Tepatnya di CRC3+J8P, Jl. Palem, Jati, Cemani, Kec. Grogol, Kabupaten Sukoharjo, Jawa Tengah 57552.</p>
+                </div>
+            </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
