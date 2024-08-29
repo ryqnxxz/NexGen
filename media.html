@@ -123,6 +123,10 @@
             display: flex;
             justify-content: space-between;
             gap: 20px;
+            margin-bottom: 30px; /* Menambahkan jarak di bawah setiap baris */
+        }
+        .music-row:last-child {
+            margin-bottom: 0;
         }
         .music-item {
             background-color: rgba(255, 255, 255, 0.1);
@@ -210,11 +214,10 @@
         <hr class="content-separator">
 
         <div class="video-container">
-            <h2>video</h2>
             <div class="video-box">
                 <div class="video-wrapper">
                     <iframe width="100" height="350" src="https://www.youtube.com/embed/RTqilLK0XjY?si=60Z9L_IujCwron_l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                    </div>
-                <h3>Dies Natalis 22 Polinus</h3>
+                <h3>Video Container</h3>
                 <div class="description-box">
                     <p>Ini adalah video singkat Dies Natalis 22 Politeknik Indonusa Surakarta.</p>
                 </div>
@@ -226,7 +229,7 @@
         <div class="music-container">
             <h2>Musik Musikan dulu YGY</h2>
             <div class="music-box">
-                <h3>Lagu-lagu Galau</h3>
+                <h3>Ini adalah beberapa lagu dari request temen-temen</h3>
                 <div class="music-row">
                     <div class="music-item">
                         <p>The One That Got Away - <span class="artist">Katy Perry</span></p>
@@ -241,10 +244,29 @@
                         </audio>
                     </div>
                     <div class="music-item">
-                        <p>all the kids are depressed - <span class="artist">Jeremy Zucker
-                        </span></p>
+                        <p>all the kids are depressed - <span class="artist">Jeremy Zucker</span></p>
                         <audio controls>
                             <source src="music/allkids.mp3" type="audio/mp3">
+                        </audio>
+                    </div>
+                </div>
+                <div class="music-row">
+                    <div class="music-item">
+                        <p>DJ Ya Odna X The Drum 🔥🥵 - <span class="artist">Andra Fvnky Rmx</span></p>
+                        <audio controls>
+                            <source src="music/thedrum.mp3" type="audio/mp3">
+                        </audio>
+                    </div>
+                    <div class="music-item">
+                        <p>DJ Sweet Love - <span class="artist">Rensky YT</span></p>
+                        <audio controls>
+                            <source src="music/sweetlove.mp3" type="audio/mp3">
+                        </audio>
+                    </div>
+                    <div class="music-item">
+                        <p>If We Being Real - <span class="artist">define aura</span></p>
+                        <audio controls>
+                            <source src="music/ifwe.mp3" type="audio/mp3">
                         </audio>
                     </div>
                 </div>
