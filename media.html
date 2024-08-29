@@ -166,6 +166,29 @@
         .prev:hover, .next:hover {
             background-color: rgba(0, 0, 0, 0.384);
         }
+        .qr-code-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+        .qr-code-image {
+            max-width: 300px; /* Ukuran diperbesar */
+            border: 2px solid #ffffff;
+            border-radius: 10px;
+        }
+        .qr-code-link {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .qr-code-link a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .qr-code-link a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body class="media">
@@ -271,6 +294,16 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <hr class="content-separator">
+
+        <!-- Tambahkan gambar QR code di sini -->
+        <div class="qr-code-container">
+            <img src="images/qrcode.png" alt="QR Code" class="qr-code-image">
+        </div>
+        <div class="qr-code-link">
+            <a href="https://rb.gy/v89pm7" target="_blank">@https://rb.gy/v89pm7</a>
         </div>
     </div>
 
